@@ -69,8 +69,8 @@ function App() {
 
   }
 
-  // blinkingPointer();
-  // type();
+  blinkingPointer();
+  type();
 
   const skills = [
     {
