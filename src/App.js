@@ -1,3 +1,4 @@
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import './App.css';
 import portfolioImage from './Assets/jaimin_desai.jpg';
 import reactImage from './Assets/react.png';
@@ -8,8 +9,19 @@ import vueImage from './Assets/vue.png';
 import javaImage from './Assets/java.svg';
 import pythonImage from './Assets/python.png';
 import jsImage from './Assets/js.png';
+import phoneImage from './Assets/phone.svg';
+import emailImage from './Assets/email.svg';
+import tempImage from './Assets/temp.jpg';
+import { useState } from 'react';
+var Carousel = require('react-responsive-carousel').Carousel;
 
 function App() {
+
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [find, setFind] = useState('');
+
 
   let data = ["Front End Developer.", "Full Stack Developer.", "Software Engineer."];
   let len = 0;
@@ -57,49 +69,49 @@ function App() {
 
   }
 
-  blinkingPointer();
-  type();
+  // blinkingPointer();
+  // type();
 
   const skills = [
     {
       name: "React",
       image: reactImage,
-      description: "lore ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      description: "Crafting dynamic interfaces with a modern hook-based architecture."
     },
     {
       name: "Angular",
       image: angularImage,
-      description: "lore ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      description: "Building robust, feature-rich web applications with TypeScript and modular Angular architecture."
     },
     {
       name: "HTML",
       image: htmlImage,
-      description: "lore ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      description: "Structuring information for clarity and accessibility."
     },
     {
       name: "CSS",
       image: cssImage,
-      description: "lore ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      description: "Styling for visually appealing and responsive web applications."
     },
     {
       name: "Vue",
       image: vueImage,
-      description: "lore ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      description: "Designing intuitive, performant interfaces with reactive data binding."
     },
     {
       name: "Java",
       image: javaImage,
-      description: "lore ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      description: "Developing reliable and scalable backend systems and enterprise applications."
     },
     {
       name: "Python",
       image: pythonImage,
-      description: "lore ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      description: "Efficient and readable code for backend, scripting, and data analysis."
     },
     {
       name: "JavaScript",
       image: jsImage,
-      description: "lore ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      description: "Bringing interactivity to web applications with vanilla JS and modern frameworks."
     }
   ]
 
@@ -107,17 +119,32 @@ function App() {
     return skills.map((skill, index) => {
       return (
         <div key={index} className="skill">
-          {/* <div className="skill-name">{skill.name}</div> */}
           <div className="upper-layer">
             <img src={skill.image} className="skill-image" alt={skill.name} />
           </div>
           <div className="lower-layer">
-            <div>{skill.name}</div>
+            <div className="skill-name">{skill.name}</div>
             <div className="skill-description">{skill.description}</div>
           </div>
         </div>
       )
     })
+  }
+
+  const scrollToView = (id) => {
+    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+  }
+
+  const onChange = (value) => {
+    console.log(value);
+  }
+
+  const onClickItem = (value) => {
+    console.log(value);
+  }
+
+  const onClickThumb = (value) => {
+    console.log(value);
   }
 
   return (
@@ -128,7 +155,7 @@ function App() {
             <span className='info-header' id="typewriter">Front End Developer.</span>
           </p>
           <p className='info-summary'>My name's <strong>Jaimin Desai</strong>. I craft user interfaces using modern frontend web technologies.</p>
-          <div className='lets-connect'>Let's connect!</div>
+          <div className='lets-connect' onClick={() => scrollToView("contact")}>Let's connect!</div>
           <div className="info-links">
             <div className="info-socials">
               Find me at
@@ -174,14 +201,62 @@ function App() {
         </div> */}
         <div className='portfolio-section sticky-section projects-wrapper'>
           <div className="projects">
-            <div>projects</div>
-            <p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru</p>
+            <div className='projects-header'>Projects</div>
+            <p className='projects-description'>Swipe or drag below to see a small selection of projects I've worked on.</p>
+            <Carousel showArrows={true} onChange={onChange} onClickItem={onClickItem} onClickThumb={onClickThumb}>
+                <div className="project-image">
+                    <img src={tempImage} />
+                    <div className="projects-details">
+                      <p className="projects-details-header">Project 1</p>
+                      <p className="projects-details-description">lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru</p>
+                    </div>
+                </div>
+                <div className="project-image">
+                    <img src={tempImage} />
+                    <div className="projects-details">
+                      <p className="projects-details-header">Project 2</p>
+                      <p className="projects-details-description">lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru</p>
+                    </div>
+                </div>
+                <div className="project-image">
+                    <img src={tempImage} />
+                    <div className="projects-details">
+                      <p className="projects-details-header">Project 3</p>
+                      <p className="projects-details-description">lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru</p>
+                    </div>
+                </div>
+                <div className="project-image">
+                    <img src={tempImage} />
+                    <div className="projects-details">
+                      <p className="projects-details-header">Project 4</p>
+                      <p className="projects-details-description">lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru</p>
+                    </div>
+                </div>
+            </Carousel>
           </div>
         </div>
         <div className='portfolio-section sticky-section contact-wrapper'>
-          <div className="contact">
-            <div>Get in touch!</div>
-            <p>Nothing wrong in just a mail/call.</p>
+          <div className="contact" id="contact">
+            <div className="contact-header">Get in touch!</div>
+            <p className="contact-description">Nothing wrong in saying "Hello". If you have any inquiry or project in mind, let's do it !!</p>
+            <p>Name / Company</p>
+            <input type="text" placeholder="John Doe" className="contact-input" value={name} onChange={(e) => setName(e.target.value)} />
+            <p>Email</p>
+            <input type="email" placeholder="hello@example.comn" className="contact-input" value={email} onChange={(e) => setEmail(e.target.value)} />
+            <p>Message</p>
+            <textarea placeholder="I heard you were the best!" className="contact-textarea" rows="3" value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
+            <p>How did you find me?</p>
+            <input type="text" placeholder="I saw you on social media." className="contact-input" value={find} onChange={(e) => setFind(e.target.value)} />
+            <a href={"mailto:desaijaimin5@gmail.com?subject=Hello from " + name + "&body=" + message + " and " + find} className='contact-send-message-btn'>
+              <div className="contact-submit">Submit</div>
+            </a>
+            <div className="contact-description contact-additional">
+              <p>You can also</p>
+              <a href='tel:+1-437-982-9484'><img src={phoneImage} alt="phone" className="contact-icon" /></a>
+              <p>or</p>
+              <a href='mailto:desaijaimin5@gmail.com'><img src={emailImage} alt="email" className="contact-icon" /></a>
+              <p>anytime. I will do my best to answer.</p>
+            </div>
           </div>
         </div>
       </div>
