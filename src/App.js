@@ -205,28 +205,28 @@ function App() {
             <p className='projects-description'>Swipe or drag below to see a small selection of projects I've worked on.</p>
             <Carousel showArrows={true} onChange={onChange} onClickItem={onClickItem} onClickThumb={onClickThumb}>
                 <div className="project-image">
-                    <img src={tempImage} />
+                    <img src={tempImage} alt="project1" />
                     <div className="projects-details">
                       <p className="projects-details-header">Project 1</p>
                       <p className="projects-details-description">lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru</p>
                     </div>
                 </div>
                 <div className="project-image">
-                    <img src={tempImage} />
+                    <img src={tempImage} alt="project1" />
                     <div className="projects-details">
                       <p className="projects-details-header">Project 2</p>
                       <p className="projects-details-description">lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru</p>
                     </div>
                 </div>
                 <div className="project-image">
-                    <img src={tempImage} />
+                    <img src={tempImage} alt="project1" />
                     <div className="projects-details">
                       <p className="projects-details-header">Project 3</p>
                       <p className="projects-details-description">lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru</p>
                     </div>
                 </div>
                 <div className="project-image">
-                    <img src={tempImage} />
+                    <img src={tempImage} alt="project1" />
                     <div className="projects-details">
                       <p className="projects-details-header">Project 4</p>
                       <p className="projects-details-description">lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru</p>
