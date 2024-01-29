@@ -11,7 +11,11 @@ import pythonImage from './Assets/python.png';
 import jsImage from './Assets/js.png';
 import phoneImage from './Assets/phone.svg';
 import emailImage from './Assets/email.svg';
-import tempImage from './Assets/temp.jpg';
+import sneakerama from './Assets/sneakerama.jpg';
+import sevaImage from './Assets/seva.jpg';
+import tstoreImage from './Assets/tstore.jpg';
+import buildPortfolioImage from './Assets/buildportfolio.jpg';
+import triplifyImage from './Assets/triplify.jpg';
 import { useState } from 'react';
 var Carousel = require('react-responsive-carousel').Carousel;
 
@@ -204,34 +208,51 @@ function App() {
             <div className='projects-header'>Projects</div>
             <p className='projects-description'>Swipe or drag below to see a small selection of projects I've worked on.</p>
             <Carousel showArrows={true} onChange={onChange} onClickItem={onClickItem} onClickThumb={onClickThumb}>
+              <a href='https://github.com/Jaku245/sneakerama-github' target='_blank' rel="noopener noreferrer">
                 <div className="project-image">
-                    <img src={tempImage} alt="project1" />
-                    <div className="projects-details">
-                      <p className="projects-details-header">Project 1</p>
-                      <p className="projects-details-description">lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru</p>
-                    </div>
+                  <img src={sneakerama} alt="Sneakerama" />
+                  <div className="projects-details">
+                    <p className="projects-details-header">Sneakerama</p>
+                    <p className="projects-details-description">One stop store for all the sneaker-heads.</p>
+                  </div>
                 </div>
+              </a>
+              <a href='https://github.com/Jaku245/SEVA/tree/front-end' target='_blank' rel="noopener noreferrer">
                 <div className="project-image">
-                    <img src={tempImage} alt="project1" />
-                    <div className="projects-details">
-                      <p className="projects-details-header">Project 2</p>
-                      <p className="projects-details-description">lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru</p>
-                    </div>
+                  <img src={sevaImage} alt="SEVA" />
+                  <div className="projects-details">
+                    <p className="projects-details-header">SEVA</p>
+                    <p className="projects-details-description">All the essential services at your door step.</p>
+                  </div>
                 </div>
+              </a>
+              <a href='https://github.com/Jaku245/TSTore' target='_blank' rel="noopener noreferrer">
                 <div className="project-image">
-                    <img src={tempImage} alt="project1" />
-                    <div className="projects-details">
-                      <p className="projects-details-header">Project 3</p>
-                      <p className="projects-details-description">lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru</p>
-                    </div>
+                  <img src={tstoreImage} alt="TStore" />
+                  <div className="projects-details">
+                    <p className="projects-details-header">TStore</p>
+                    <p className="projects-details-description">Be in the latest T-trend all the time.</p>
+                  </div>
                 </div>
+              </a>
+              <a href='https://github.com/Jaku245/BuildPortfolio' target='_blank' rel="noopener noreferrer">
                 <div className="project-image">
-                    <img src={tempImage} alt="project1" />
-                    <div className="projects-details">
-                      <p className="projects-details-header">Project 4</p>
-                      <p className="projects-details-description">lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru</p>
-                    </div>
+                  <img src={buildPortfolioImage} alt="BuildPortfolio" />
+                  <div className="projects-details">
+                    <p className="projects-details-header">BuildPortfolio</p>
+                    <p className="projects-details-description">Your own portfolio is one step away.</p>
+                  </div>
                 </div>
+              </a>
+              <a href='https://github.com/Jaku245/Triplify' target='_blank' rel="noopener noreferrer">
+                <div className="project-image">
+                  <img src={triplifyImage} alt="Triplify" />
+                  <div className="projects-details">
+                    <p className="projects-details-header">Triplify</p>
+                    <p className="projects-details-description">Make your tavel experience smooth and hassle free.</p>
+                  </div>
+                </div>
+              </a>
             </Carousel>
           </div>
         </div>
