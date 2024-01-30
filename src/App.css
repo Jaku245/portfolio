@@ -120,6 +120,10 @@
   height: 100vh;
 }
 
+.contact-section {
+  min-height: 100vh;
+}
+
 .sticky-section {
   position: -webkit-sticky;
   position: sticky;
@@ -152,7 +156,7 @@
   color: var(--black);
   padding-inline: 10%;
   /* height: 100%; */
-  padding-top: 10%;
+  padding-top: 5%;
 }
 
 .about-me-header {
@@ -168,7 +172,7 @@
 }
 
 .about-me-sub-header {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 1rem;
 }
@@ -335,16 +339,23 @@
 .contact-description {
   font-size: 1rem;
   font-weight: 400;
-  margin-bottom: 2.5rem;
+  margin-top: 0;
+  margin-bottom: 1.75rem;
   color: var(--grey);
+}
+
+.contact-input-label {
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
 }
 
 .contact-input {
   min-width: 60%;
-  height: 2rem;
+  height: 1.5rem;
   border: none;
   /* border-bottom: 1px solid var(--grey); */
-  padding: 0.5rem 1rem;
+  padding: 0.25rem 0.5rem;
   margin-bottom: 0.5rem;
   font-size: 0.9rem;
   font-weight: 400;
@@ -361,7 +372,7 @@
   min-width: 60%;
   border: none;
   /* border-bottom: 1px solid var(--grey); */
-  padding: 0.5rem 1rem;
+  padding: 0.25rem 0.5rem;
   margin-bottom: 0.5rem;
   font-size: 0.9rem;
   font-weight: 400;
@@ -401,6 +412,7 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  margin: 0rem;
 }
 
 .contact-icon {

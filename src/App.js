@@ -139,18 +139,6 @@ function App() {
     document.getElementById(id).scrollIntoView({ behavior: "smooth" });
   }
 
-  const onChange = (value) => {
-    console.log(value);
-  }
-
-  const onClickItem = (value) => {
-    console.log(value);
-  }
-
-  const onClickThumb = (value) => {
-    console.log(value);
-  }
-
   return (
     <div className="main-container">
       <div className="info-wrapper">
@@ -207,7 +195,7 @@ function App() {
           <div className="projects">
             <div className='projects-header'>Projects</div>
             <p className='projects-description'>Swipe or drag below to see a small selection of projects I've worked on.</p>
-            <Carousel showArrows={true} onChange={onChange} onClickItem={onClickItem} onClickThumb={onClickThumb}>
+            <Carousel showArrows={true} showThumbs={false}>
               <a href='https://github.com/Jaku245/sneakerama-github' target='_blank' rel="noopener noreferrer">
                 <div className="project-image">
                   <img src={sneakerama} alt="Sneakerama" />
@@ -256,17 +244,18 @@ function App() {
             </Carousel>
           </div>
         </div>
-        <div className='portfolio-section sticky-section contact-wrapper'>
+        <div className='contact-section sticky-section contact-wrapper'>
           <div className="contact" id="contact">
             <div className="contact-header">Get in touch!</div>
-            <p className="contact-description">Nothing wrong in saying "Hello". If you have any inquiry or project in mind, let's do it !!</p>
-            <p>Name / Company</p>
+            <p className="contact-description">Nothing wrong in saying "Hello".</p>
+            {/* <p className="contact-description">Nothing wrong in saying "Hello". If you have any inquiry or project in mind, let's do it !!</p> */}
+            <p className="contact-input-label">Name / Company</p>
             <input type="text" placeholder="John Doe" className="contact-input" value={name} onChange={(e) => setName(e.target.value)} />
-            <p>Email</p>
+            <p className="contact-input-label">Email</p>
             <input type="email" placeholder="hello@example.comn" className="contact-input" value={email} onChange={(e) => setEmail(e.target.value)} />
-            <p>Message</p>
+            <p className="contact-input-label">Message</p>
             <textarea placeholder="I heard you were the best!" className="contact-textarea" rows="3" value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
-            <p>How did you find me?</p>
+            <p className="contact-input-label">How did you find me?</p>
             <input type="text" placeholder="I saw you on social media." className="contact-input" value={find} onChange={(e) => setFind(e.target.value)} />
             <a href={"mailto:desaijaimin5@gmail.com?subject=Hello from " + name + "&body=" + message + " and " + find} className='contact-send-message-btn'>
               <div className="contact-submit">Submit</div>
