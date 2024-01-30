@@ -1,12 +1,15 @@
 :root {
   --primary: #2e304b;
   --primary: #6c584c;
-  /* --primary: #eae0d5;
-  --primary: #0a0908; */
+  /* --primary: #124559; */
+  /* --primary: #3c6e71; */
+  /* --primary: #eae0d5; */
+  /* --primary: #0a0908; */
   --secondary: #fd8e8e;
   --secondary: #f0ead2;
-  /* --secondary: #0a0908;
-  --secondary: #eae0d5; */
+  --secondary: #dddad8;
+  /* --secondary: #0a0908; */
+  /* --secondary: #eae0d5; */
   --third: #f1f1f1;
   --black: #2e304b;
   --grey: #6b6c7b;
@@ -188,6 +191,10 @@
   margin-top: 2rem;
   color: var(--grey);
   font-family: 'Courier New', Courier, monospace;
+}
+
+.about-me-namaste-translation {
+  font-family: 'Poppins', sans-serif;
 }
 
 .skills-wrapper {
@@ -383,6 +390,10 @@
 
 .contact-textarea:focus {
   outline: none;
+}
+
+.contact-input-invalid {
+  border: 1px solid red;
 }
 
 .contact-send-message-btn {
